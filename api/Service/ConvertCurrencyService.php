@@ -5,9 +5,8 @@ declare(strict_types=1);
 namespace Api\Service;
 
 use Api\Adapter\ExternalQuotesAPI;
-use Exception;
 
-class ConvertCurrency
+class ConvertCurrencyService
 {
   private $externalQuotesAPI;
 
@@ -21,10 +20,6 @@ class ConvertCurrency
     string $to,
     float $amount = 1
   ): float {
-    // if (isset($to)) {
-    //   return throw new Exception("from and to values cannot be null or empty", 400);
-    // }
-
     $rate = $this->externalQuotesAPI->getExchangeRate($from, $to);
     $value = $amount * $rate;
 

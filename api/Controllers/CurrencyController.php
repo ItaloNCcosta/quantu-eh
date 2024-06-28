@@ -2,7 +2,7 @@
 
 namespace Api\Controllers;
 
-use Api\Service\ConvertCurrency;
+use Api\Service\ConvertCurrencyService;
 
 class CurrencyController
 {
@@ -10,7 +10,7 @@ class CurrencyController
 
   public function __construct()
   {
-    $this->service = new ConvertCurrency();
+    $this->service = new ConvertCurrencyService();
   }
 
   // curl -X GET 'http://localhost:8000/api/currency-convert?from=USD&to=BRL&amount=100'
