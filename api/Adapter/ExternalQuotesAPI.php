@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Api\Adapter;
 
-use Api\HTTP\Client;
+use Api\HTTP\HttpClient;
 
 class ExternalQuotesAPI
 {
@@ -13,7 +13,7 @@ class ExternalQuotesAPI
 
   public function __construct()
   {
-    $this->httpClient = new client();
+    $this->httpClient = new HttpClient();
     $this->externalApi = $_SERVER['EXTERNAL_API'];
   }
 

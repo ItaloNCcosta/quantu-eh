@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Api\HTTP;
 
-class Client
+class HttpClient
 {
   /**
    * Executes and returns the api response
